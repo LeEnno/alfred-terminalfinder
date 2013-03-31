@@ -15,7 +15,7 @@ Install workflow and enter following keywords depending on what you want to achi
 
 In addition the search result in Alfred will show you what the action will do in its subtitle, i.e. `ft`:
 
-![Finder → Terminal](https://raw.github.com/LeEnno/alfred-terminalfinder/master/screenshot_dateformat.png)
+![Finder → Terminal](https://raw.github.com/LeEnno/alfred-terminalfinder/master/screenshot_ft.png)
 
 Hat tip
 -------
