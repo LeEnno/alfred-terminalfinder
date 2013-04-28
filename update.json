@@ -1,5 +1,5 @@
 {
     "version": 1.3,
-    "download_uri": "https://github.com/LeEnno/alfred-terminalfinder/blob/master/TerminalFinder.alfredworkflow?raw=true",
+    "download_url": "https://github.com/LeEnno/alfred-terminalfinder/blob/master/TerminalFinder.alfredworkflow?raw=true",
     "description": "Tabs for Terminal + more speed for iTerm (thx alexbepple)"
 }
