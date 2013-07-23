@@ -1,5 +1,5 @@
 {
-    "version": 1.4,
+    "version": 1.5,
     "download_url": "https://github.com/LeEnno/alfred-terminalfinder/blob/master/TerminalFinder.alfredworkflow?raw=true",
-    "description": "Added Bundle-ID"
+    "description": "Added Path Finder support"
 }
