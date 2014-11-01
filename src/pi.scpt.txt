@@ -1,0 +1,36 @@
+on alfred_script(q)
+  tell application "Path Finder"
+    set pathList to POSIX path of the target of the front finder window
+  end tell
+
+  tell application "System Events"
+    set isRunning to (exists (processes where name is "iTerm"))
+  end tell
+
+  tell application "iTerm"
+    activate
+    set termCount to count of terminals
+    
+    if termCount is 0 then
+      set _term to (make new terminal)
+    else
+      if isRunning then
+        set _term to the first terminal
+        tell i term application "System Events" to tell process "Terminal.app" to keystroke "t" using command down
+      end if
+    end if
+    
+    try
+      set _session to current session of current terminal
+    on error
+      tell _term
+        launch session ""
+        set _session to current session
+      end tell
+    end try
+    
+    tell _session
+      write text "cd " & quoted form of pathList & "; clear"
+    end tell
+  end tell
+end alfred_script

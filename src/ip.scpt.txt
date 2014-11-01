@@ -1,0 +1,7 @@
+on alfred_script(q)
+  tell application "iTerm"
+    tell the current session of current terminal
+      write text "open -a 'Path Finder' ./"
+    end tell
+  end tell
+end alfred_script

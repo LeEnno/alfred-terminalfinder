@@ -1,5 +1,5 @@
 {
-    "version": 1.6,
+    "version": 1.7,
     "download_url": "https://github.com/LeEnno/alfred-terminalfinder/blob/master/TerminalFinder.alfredworkflow?raw=true",
-    "description": "Improved Path Finder support"
+    "description": "Improved launching of iTerm's default session"
 }
