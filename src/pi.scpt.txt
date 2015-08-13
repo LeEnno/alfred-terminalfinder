@@ -7,30 +7,20 @@ on alfred_script(q)
     set isRunning to (exists (processes where name is "iTerm"))
   end tell
 
-  tell application "iTerm"
-    activate
-    set termCount to count of terminals
-    
-    if termCount is 0 then
-      set _term to (make new terminal)
-    else
-      if isRunning then
-        set _term to the first terminal
-        tell i term application "System Events" to tell process "Terminal.app" to keystroke "t" using command down
-      end if
-    end if
-    
-    try
-      set _session to current session of current terminal
-    on error
-      tell _term
-        launch session ""
-        set _session to current session
+  if isRunning then
+    tell application "iTerm"
+      activate
+      tell the first terminal
+        set mysession to (launch session "Default Session")
+        tell mysession to write text "clear; cd " & pathList
       end tell
-    end try
-    
-    tell _session
-      write text "cd " & quoted form of pathList & "; clear"
     end tell
-  end tell
+  else
+    tell application "iTerm"
+      activate
+      tell the first terminal
+        tell the last session to write text "clear; cd " & pathList
+      end tell
+    end tell
+  end if
 end alfred_script
