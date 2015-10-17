@@ -1,6 +1,7 @@
 on alfred_script(q)
   tell application "Path Finder"
     set pathList to POSIX path of the target of the front finder window
+    set pathList to quoted form of pathList
   end tell
 
   tell application "System Events"
