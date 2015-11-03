@@ -4,22 +4,38 @@ on alfred_script(q)
   end tell
 
   tell application "System Events"
-    set isRunning to (exists (processes where name is "iTerm"))
+    set isRunning to (exists (processes where name is "iTerm2"))
   end tell
 
   if isRunning then
     tell application "iTerm"
       activate
-      tell the first terminal
-        set mysession to (launch session "Default Session")
-        tell mysession to write text "clear; cd " & pathList
+      try
+        select first window
+        set onlywindow to false
+      on error
+        create window with default profile
+        select first window
+        set onlywindow to true
+      end try
+      tell the first window
+        if onlywindow is false then
+          create tab with default profile
+        end if
+        tell current session to write text "clear; cd " & pathList
       end tell
     end tell
   else
     tell application "iTerm"
       activate
-      tell the first terminal
-        tell the last session to write text "clear; cd " & pathList
+      try
+        select first window
+      on error
+        create window with default profile
+        select first window
+      end try
+      tell the first window
+        tell current session to write text "clear; cd " & pathList
       end tell
     end tell
   end if
