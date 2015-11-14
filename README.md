@@ -1,10 +1,10 @@
-alfred-terminalfinder
-=====================
+## alfred-terminalfinder
 
 Alfred workflow to open current Finder window in Terminal/iTerm and vice versa.
 
-Usage
------
+**Attention:** you're currently seeing the branch for compatibility with iTerm 2.1.x. If you're looking for support for versions >= 2.9.x, see [the master branch](https://github.com/LeEnno/alfred-terminalfinder "LeEnno/alfred-terminalfinder").
+
+## Usage
 
 Install workflow and enter following keywords depending on what you want to achieve:
 
@@ -24,7 +24,6 @@ In addition the search result in Alfred will show you what the action will do in
 
 ![Finder → Terminal](https://raw.github.com/LeEnno/alfred-terminalfinder/master/screenshot_ft.png)
 
-Hat tip
--------
+## Hat tip
 
 This workflow was heavily inspired by [ssgreg's *Terminal in Finder's folder*](https://github.com/ssgreg/AlfredWorkflows/ "ssgreg/AlfredWorkflows · GitHub").
