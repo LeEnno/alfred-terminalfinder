@@ -2,25 +2,24 @@ on alfred_script(q)
   tell application "Finder"
     set pathList to (quoted form of POSIX path of (folder of the front window as alias))
   end tell
-
+  
   tell application "System Events"
     set isRunning to (exists (processes where name is "iTerm"))
   end tell
-
-  if isRunning then
-    tell application "iTerm"
-      activate
-      tell the first terminal
-        set mysession to (launch session "Default Session")
-        tell mysession to write text "clear; cd " & pathList
-      end tell
+  
+  tell application "iTerm"
+    activate
+    if isRunning and (count of terminals) is 0 then
+      make new terminal
+    end if
+    
+    tell the first terminal
+      if isRunning then
+        set mySession to (launch session "Default Session")
+      else
+        set mySession to the last session
+      end if
+      tell mySession to write text "clear; cd " & pathList
     end tell
-  else
-    tell application "iTerm"
-      activate
-      tell the first terminal
-        tell the last session to write text "clear; cd " & pathList
-      end tell
-    end tell
-  end if
+  end tell
 end alfred_script
