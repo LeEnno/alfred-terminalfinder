@@ -16,11 +16,9 @@ on alfred_script(q)
     
     tell the first terminal
       if isRunning then
-        set mySession to (launch session "Default Session")
-      else
-        set mySession to the last session
+        launch session "Default Session"
       end if
-      tell mySession to write text "clear; cd " & pathList
+      tell the last session to write text "clear; cd " & pathList
     end tell
   end tell
 end alfred_script
