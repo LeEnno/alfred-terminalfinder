@@ -24,7 +24,7 @@ In addition the search result in Alfred will show you what the action will do in
 
 ## iTerm Compatibility
 
-This workflow works with iTerm 2.9.x. If you need support for 2.1.x, [see the `2.1.x` branch](https://github.com/LeEnno/alfred-terminalfinder/tree/2.1.x "LeEnno/alfred-terminalfinder at 2.1.x").
+This workflow works with iTerm 3.x and 2.9.x. If you need support for 2.1.x, [see the `2.1.x` branch](https://github.com/LeEnno/alfred-terminalfinder/tree/2.1.x "LeEnno/alfred-terminalfinder at 2.1.x").
 
 ## Hat tip
 
