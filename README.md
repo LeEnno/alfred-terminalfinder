@@ -26,6 +26,12 @@ In addition the search result in Alfred will show you what the action will do in
 
 This workflow works with iTerm 3.x and 2.9.x. If you need support for 2.1.x, [see the `2.1.x` branch](https://github.com/LeEnno/alfred-terminalfinder/tree/2.1.x "LeEnno/alfred-terminalfinder at 2.1.x").
 
+## Known Issues
+
+Unfortunately there seems to be a weird bug with iTerm 3.x which causes the `fi` keyword not to work. This bug appears to vanish after some time. So if you encounter it, you may try [@hunit's suggestion](https://github.com/LeEnno/alfred-terminalfinder/issues/21#issuecomment-244546871 "fi in iterm2 doesn't work · Issue #21 · LeEnno/alfred-terminalfinder").
+
+If you even find a way to reproduce it, I'd be happy to receive your report in the [corresponding issue](https://github.com/LeEnno/alfred-terminalfinder/issues/21 "fi in iterm2 doesn't work · Issue #21 · LeEnno/alfred-terminalfinder")... and may also flood you with all the ❤️ I have, like, forever.
+
 ## Hat tip
 
 This workflow was heavily inspired by [ssgreg's *Terminal in Finder's folder*](https://github.com/ssgreg/AlfredWorkflows/ "ssgreg/AlfredWorkflows · GitHub").
