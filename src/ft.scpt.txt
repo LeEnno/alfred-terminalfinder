@@ -9,8 +9,13 @@ on alfred_script(q)
     else
       tell application "Terminal"
         activate
-        tell application "System Events" to tell process "Terminal.app" to keystroke "t" using command down
-        do script ("cd " & pathList) in first window
+        if (count of windows) is 0 then
+          do script ("cd " & pathList)
+        else
+          tell application "System Events" to tell process "Terminal.app" to keystroke "t" using command down
+          delay 1
+          do script ("cd " & pathList) in first window
+        end if
       end tell
     end if
   end tell
