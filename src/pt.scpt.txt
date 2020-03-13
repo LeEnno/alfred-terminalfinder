@@ -1,6 +1,11 @@
 on alfred_script(q)
   tell application "Path Finder"
-    set pathList to POSIX path of the target of the front finder window
+    set selection_list to selection
+    set pathList to POSIX path of first item of selection_list
+    set AppleScript's text item delimiters to "/"
+    set thePathComponents to (get every text item in pathList) as list
+    set item (count of items in thePathComponents) of thePathComponents to {}
+    set pathList to thePathComponents as rich text
   end tell
 
   tell application "System Events"
