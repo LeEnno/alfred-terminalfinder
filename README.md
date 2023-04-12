@@ -2,6 +2,8 @@
 
 Alfred workflow to open current Finder window in Terminal/iTerm and vice versa.
 
+<img src="https://raw.github.com/LeEnno/alfred-terminalfinder/master/tf_icon_sm.png" width="128" height="128">
+
 ## Usage
 
 Install workflow and enter following keywords depending on what you want to achieve:
