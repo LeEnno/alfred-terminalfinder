@@ -18,6 +18,10 @@ Thanks to @olibob we also have [Path Finder](http://www.cocoatech.com/ "Path Fin
 - `pi`: open current **Path Finder** directory in **iTerm**
 - `ip`: open current **iTerm** directory in **Path Finder**
 
+Thanks to [@raghavpillai](https://github.com/raghavpillai) we also have [Warp](https://www.warp.dev) support:
+
+- `fw`: open current **Finder** directory in **Warp**
+
 In addition the search result in Alfred will show you what the action will do in its subtitle, i.e. `ft`:
 
 ![Finder → Terminal](https://raw.github.com/LeEnno/alfred-terminalfinder/master/screenshot_ft.png)
